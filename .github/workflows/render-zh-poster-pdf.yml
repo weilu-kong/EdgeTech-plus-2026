@@ -17,22 +17,15 @@ jobs:
       - name: Checkout poster branch
         uses: actions/checkout@v4
 
-      - name: Prepare A0 print CSS
-        shell: python
-        run: |
-          from pathlib import Path
-          p = Path("poster.html")
-          html = p.read_text(encoding="utf-8")
-          css = '<style>@page { size: 841mm 1189mm; margin: 0; } html,body { margin: 0 !important; padding: 0 !important; }</style>'
-          if css not in html:
-              html = html.replace("</head>", css + "\n</head>")
-          p.write_text(html, encoding="utf-8")
-
-      - name: Install lightweight PDF renderer
+      - name: Install CJK fonts and renderer
         shell: bash
-        run: npm install --no-save puppeteer-core@24
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+          fc-cache -f
+          npm install --no-save puppeteer-core@24
 
-      - name: Render exact A0 PDF
+      - name: Render screen layout directly to exact A0 PDF
         shell: bash
         run: |
           set -euxo pipefail
@@ -47,13 +40,25 @@ jobs:
               args: ['--no-sandbox', '--disable-gpu', '--allow-file-access-from-files']
             });
             const page = await browser.newPage();
+            await page.setViewport({width: 1706, height: 2400, deviceScaleFactor: 1});
             const url = 'file://' + path.resolve('poster.html');
             await page.goto(url, {waitUntil: 'networkidle0', timeout: 60000});
-            await page.emulateMediaType('print');
+            await page.emulateMediaType('screen');
+            await page.evaluate(() => {
+              const poster = document.getElementById('poster');
+              const stage = document.getElementById('stage');
+              poster.style.transform = 'none';
+              poster.style.transformOrigin = 'top left';
+              stage.style.width = '1682px';
+              stage.style.height = '2378px';
+            });
+            await page.evaluate(() => document.fonts.ready);
+            await new Promise(r => setTimeout(r, 1000));
             await page.pdf({
               path: 'EdgeTech2026_zh-CN_A0.pdf',
               width: '841mm',
               height: '1189mm',
+              scale: 1.88941736,
               printBackground: true,
               margin: {top: '0mm', right: '0mm', bottom: '0mm', left: '0mm'},
               preferCSSPageSize: false
