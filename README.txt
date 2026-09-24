@@ -42,3 +42,38 @@ EdgeTech+ 2026 A0 HTML v6
 - ESP-BLE-AUDIO (ESP32-H4): https://docs.espressif.com/projects/esp-idf/en/stable/esp32h4/api-reference/bluetooth/esp-ble-audio.html
 - 楽鑫ジャパン株式会社: https://www.espressif.com/ja-jp/company/about-us/jp-company
 
+官方品牌文案来源（2026-09-24）
+==============================
+
+海报中的装饰型英文 / 日文标语已统一替换为 Espressif 官方英文或日文页面、官方公司资料中实际使用的表述；产品标题和技术说明仍按海报场景保留，不强行改写为官网原句。
+
+对应关系：
+- BUILD SMART WITH ESPRESSIF
+  来源：Espressif 英文官网首页 / About Espressif。
+  https://www.espressif.com/en/home
+  https://www.espressif.com/en/node/4770
+
+- SHARE / CONNECT / INNOVATE
+  来源：Espressif 官方年度报告、企业文化 / 招聘资料中持续使用的品牌表达。
+  https://www.espressif.com/sites/all/themes/espressif/images/nusIoTBrochure/cn/Recruitment%20Brochure_25-26_EN.pdf?v=1
+
+- Espressif と共にスマートに構築
+  来源：Espressif 日文官网 About Espressif 页面。
+  https://www.espressif.com/ja-jp/node/8844
+
+- 私たちはアーティストの視点から技術を開発します。
+  / WE DEVELOP TECHNOLOGY FROM AN ARTIST’S PERSPECTIVE.
+  来源：Espressif 日文 / 英文官网 About Espressif 页面。
+  https://www.espressif.com/ja-jp/node/8844
+  https://www.espressif.com/en/node/4770
+
+- ディープラーニング＆エッジコンピューティング
+  / DEEP LEARNING & EDGE COMPUTING
+  来源：Espressif 日文 / 英文官网 About Espressif 的技术能力栏目。
+  https://www.espressif.com/ja-jp/node/8844
+  https://www.espressif.com/en/node/4770
+
+- ENGINEERING INTELLIGENT & CONNECTED SYSTEMS
+  来源：Espressif 2026 官方公司介绍资料（About Company 2026）。
+  https://www.espressif.com/sites/all/themes/espressif/images/about-espressif/About%20Company_2026_EN.pdf?v=2
+
