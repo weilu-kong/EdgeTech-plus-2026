@@ -1457,37 +1457,58 @@ body {
 }
 
 
+
 /* =========================================================
-   v14 — keep the full PNG QR card inside the A0 canvas
+   v15 — footer QR card fix
+   Keep all footer content inside the A0 canvas without overlap.
    ========================================================= */
 
-/* The footer was already sitting on the fixed 2378px canvas edge.
-   The 108px-tall QR artwork therefore extended past the poster and
-   was clipped. Move the whole footer upward into the unused space
-   above it instead of cropping/scaling the artwork. */
 .footer{
-  position:relative!important;
-  transform:translateY(-52px)!important;
-  z-index:20!important;
-  overflow:visible!important;
+  flex:0 0 102px!important;
+  height:102px!important;
+
+  position:static!important;
+  transform:none!important;
+  z-index:auto!important;
+
+  overflow:hidden!important;
+
+  grid-template-columns:1.05fr .95fr auto!important;
+  column-gap:16px!important;
+  padding:0 40px!important;
+}
+
+.footer-brand{
+  font-size:12px!important;
+  letter-spacing:3.4px!important;
+  line-height:1.25!important;
+}
+
+.japan{
+  font-size:14px!important;
+  line-height:1.35!important;
 }
 
 .website{
-  overflow:visible!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  overflow:hidden!important;
 }
 
 .website a{
-  overflow:visible!important;
+  display:block!important;
+  line-height:0!important;
+  overflow:hidden!important;
 }
 
 .qr-selected-card{
   display:block!important;
-  width:200px!important;
+  width:162px!important;
   height:auto!important;
-  max-height:108px!important;
+  max-height:none!important;
   object-fit:contain!important;
   object-position:center!important;
-  overflow:visible!important;
 }
 
 </style>
