@@ -28,23 +28,46 @@ jobs:
               html = html.replace("</head>", css + "\n</head>")
           p.write_text(html, encoding="utf-8")
 
-      - name: Render PDF with Chrome
+      - name: Install lightweight PDF renderer
+        shell: bash
+        run: npm install --no-save puppeteer-core@24
+
+      - name: Render exact A0 PDF
         shell: bash
         run: |
           set -euxo pipefail
-          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" \
-            --headless=new \
-            --no-sandbox \
-            --disable-gpu \
-            --allow-file-access-from-files \
-            --run-all-compositor-stages-before-draw \
-            --virtual-time-budget=8000 \
-            --no-pdf-header-footer \
-            --print-to-pdf="$PWD/EdgeTech2026_zh-CN_A0.pdf" \
-            "file://$PWD/poster.html"
+          export CHROME_PATH="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          node <<'NODE'
+          const path = require('path');
+          const puppeteer = require('puppeteer-core');
+          (async () => {
+            const browser = await puppeteer.launch({
+              executablePath: process.env.CHROME_PATH,
+              headless: true,
+              args: ['--no-sandbox', '--disable-gpu', '--allow-file-access-from-files']
+            });
+            const page = await browser.newPage();
+            const url = 'file://' + path.resolve('poster.html');
+            await page.goto(url, {waitUntil: 'networkidle0', timeout: 60000});
+            await page.emulateMediaType('print');
+            await page.pdf({
+              path: 'EdgeTech2026_zh-CN_A0.pdf',
+              width: '841mm',
+              height: '1189mm',
+              printBackground: true,
+              margin: {top: '0mm', right: '0mm', bottom: '0mm', left: '0mm'},
+              preferCSSPageSize: false
+            });
+            await browser.close();
+          })().catch(err => { console.error(err); process.exit(1); });
+          NODE
           test -s EdgeTech2026_zh-CN_A0.pdf
-          pdfinfo EdgeTech2026_zh-CN_A0.pdf | tee pdfinfo.txt
+          ls -lh EdgeTech2026_zh-CN_A0.pdf
+          if command -v pdfinfo >/dev/null 2>&1; then
+            pdfinfo EdgeTech2026_zh-CN_A0.pdf | tee pdfinfo.txt
+          else
+            printf 'pdfinfo unavailable on runner\n' > pdfinfo.txt
+          fi
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
