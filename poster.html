@@ -1163,6 +1163,30 @@ body {
   font-size:9px!important;
 }
 
+
+/* =========================================================
+   v9 — tighten hero/solution transition + align edge copy
+   ========================================================= */
+
+/* Pull the white solution panel upward into the remaining lower hero space. */
+.content{
+  margin-top:-52px!important;
+}
+
+/* Keep the two Japanese technical terms intact and move the whole block left. */
+.solution-sidecopy{
+  width:245px!important;
+  transform:translateX(-54px);
+}
+.solution-sidecopy b{
+  white-space:nowrap;
+  font-size:20px!important;
+  line-height:1.42!important;
+}
+.solution-sidecopy span{
+  white-space:nowrap;
+}
+
 </style>
 </head>
 
@@ -1273,7 +1297,7 @@ body {
     </div>
 
     <div class="solution-sidecopy">
-      <b>ディープラーニング＆<br>エッジコンピューティング</b>
+      <b><span class="jp-term">ディープラーニング</span>＆<br><span class="jp-term">エッジコンピューティング</span></b>
       <i></i>
       <span>DEEP LEARNING<br>&amp; EDGE<br>COMPUTING</span>
     </div>
