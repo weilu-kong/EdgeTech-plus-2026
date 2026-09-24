@@ -14,3 +14,31 @@ EdgeTech+ 2026 A0 HTML v6
 
 浏览器预览只缩放 1682×2378 画布。打印时整张画布放大到 A0（841×1189 mm）。
 未做出血和 CMYK，不是印刷认证文件。
+
+内容校对・技术核验（2026-09-24）
+================================
+
+本轮已完成两轮内容审校：第一轮重点核对日语、规格数据和应用依据；第二轮将文案调整为更适合日本技术展会海报的简洁表达。最终可见文案以 main 分支 poster.html 为准。
+
+主要核验结论：
+- ESP32-S31：保留 Wi-Fi 6、Bluetooth 5.4 / Classic Bluetooth、802.15.4、双核 RISC-V、最高 320 MHz、512 KB SRAM、60 GPIO、1000 Mbps Ethernet 等核心信息。当前官方 Datasheet 仍为 Preliminary，正式印刷前应再次确认最新版。
+- ESP32-C5：保留 2.4 / 5 GHz Wi-Fi 6、Bluetooth LE、802.15.4、最高 240 MHz、384 KB SRAM、29 GPIO 等信息；应用定位调整为双频 IoT、网关、智能家电等，避免把无线摄像头作为主要推荐场景。
+- ESP32-H21：保留 96 MHz、320 KB SRAM、19 GPIO、片上 DC-DC、最高 20 dBm 等信息；产品定位以低功耗 Bluetooth LE / 802.15.4 为主，Matter 作为上层应用能力呈现。
+- ESP32-H4：保留 Bluetooth 5.4、Thread 1.4 / Zigbee 3.0、双核 RISC-V、最高 96 MHz、DSP、384 KB SRAM、40 GPIO、15 路触摸、外部 PSRAM、LE Audio / PAwR / Direction Finding，以及 Bluetooth 6.0 认证信息。
+- 软件与应用：ESP-GMF、ESP-VISION、ESP-Matter、ESP Private Agents、Documentation MCP 等均按官方能力边界描述，避免把框架能力写成超出其职责的硬件能力。
+- 日本法人：海报采用 2025年5月2日设立“楽鑫ジャパン株式会社”的表述。
+- 日语风格：统一使用「エッジAI」「AIエージェント」「開発を加速」「低遅延」等更适合日本技术展会物料的表达。
+
+官方核验来源：
+- ESP32-S31 Series Datasheet: https://documentation.espressif.com/esp32-s31_datasheet_en.html
+- ESP32-C5 Product Page: https://www.espressif.com/en/products/socs/esp32-c5
+- ESP32-H21 Product Page: https://www.espressif.com/en/products/socs/esp32-h21
+- ESP32-H4 Product Page: https://www.espressif.com/en/products/socs/esp32-h4
+- ESP-GMF Documentation: https://docs.espressif.com/projects/esp-gmf/en/latest/
+- ESP-VISION Documentation: https://docs.espressif.com/projects/esp-vision/en/latest/
+- ESP-Matter Documentation: https://docs.espressif.com/projects/esp-matter/en/latest/
+- ESP Private Agents Documentation: https://docs.agents.espressif.com/
+- Espressif Documentation MCP Server: https://developer.espressif.com/blog/2026/04/doc-mcp-server/
+- ESP-BLE-AUDIO (ESP32-H4): https://docs.espressif.com/projects/esp-idf/en/stable/esp32h4/api-reference/bluetooth/esp-ble-audio.html
+- 楽鑫ジャパン株式会社: https://www.espressif.com/ja-jp/company/about-us/jp-company
+
