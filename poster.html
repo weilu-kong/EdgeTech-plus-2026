@@ -1456,6 +1456,40 @@ body {
   object-fit:contain;
 }
 
+
+/* =========================================================
+   v14 — keep the full PNG QR card inside the A0 canvas
+   ========================================================= */
+
+/* The footer was already sitting on the fixed 2378px canvas edge.
+   The 108px-tall QR artwork therefore extended past the poster and
+   was clipped. Move the whole footer upward into the unused space
+   above it instead of cropping/scaling the artwork. */
+.footer{
+  position:relative!important;
+  transform:translateY(-52px)!important;
+  z-index:20!important;
+  overflow:visible!important;
+}
+
+.website{
+  overflow:visible!important;
+}
+
+.website a{
+  overflow:visible!important;
+}
+
+.qr-selected-card{
+  display:block!important;
+  width:200px!important;
+  height:auto!important;
+  max-height:108px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  overflow:visible!important;
+}
+
 </style>
 </head>
 
