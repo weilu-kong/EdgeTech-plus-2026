@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espressif EdgeTech+ 2026 Poster</title>
+
+<style>
+/* =========================================================
+   A0 POSTER
+   841 × 1189 mm → CSS 使用同样比例
+   浏览器预览尺寸：1682 × 2378 px
+   ========================================================= */
+
+:root {
+  --navy: #07182a;
+  --navy2: #102942;
+  --text: #0c1728;
+  --subtext: #41536b;
+  --red: #e4002b;
+  --line: #dfe8ef;
+  --panel: rgba(255,255,255,.94);
+  --soft: #f3f8fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #dce7ee;
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+  color: var(--text);
+}
+
+.poster {
+  position: relative;
+  width: 1682px;
+  height: 2378px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #081b2d 0,
+      #102e49 25%,
+      #eef8fc 30%,
+      #f5fbfd 100%
+    );
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  height: 590px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 76% 17%,
+      rgba(255,218,158,.95) 0,
+      rgba(255,169,86,.45) 5%,
+      transparent 19%
+    ),
+    radial-gradient(
+      ellipse at 68% 5%,
+      #254b70 0,
+      #0d2942 43%,
+      #061522 72%
+    );
+}
+
+/*
+  建议把实际地球背景图放到：
+  assets/earth.jpg
+
+  然后取消下面注释：
+*/
+
+/*
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,15,28,.92) 0%,
+      rgba(4,15,28,.40) 55%,
+      rgba(4,15,28,.10) 100%
+    ),
+    url("assets/earth.jpg") center / cover no-repeat;
+}
+*/
+
+.hero-inner {
+  position: absolute;
+  inset: 0;
+  padding: 48px 78px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: white;
+  font-size: 37px;
+  font-weight: 800;
+}
+
+.brand-divider {
+  width: 2px;
+  height: 43px;
+  background: rgba(255,255,255,.8);
+}
+
+.logo-dot {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.hero-title {
+  margin-top: 54px;
+  color: white;
+  font-size: 82px;
+  line-height: 1.08;
+  letter-spacing: -3px;
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  margin-top: 23px;
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.hero-message {
+  margin-top: 22px;
+  color: rgba(255,255,255,.92);
+  font-size: 27px;
+  letter-spacing: 2px;
+}
+
+.hero-small {
+  position: absolute;
+  right: 290px;
+  bottom: 70px;
+
+  color: white;
+  font-size: 23px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.hero-small-en {
+  margin-top: 12px;
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.content {
+  position: relative;
+  margin-top: -18px;
+  padding: 0 34px 32px;
+}
+
+
+/* =========================================================
+   COMMON PANEL
+   ========================================================= */
+
+.panel {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.98),
+      rgba(242,249,252,.95)
+    );
+
+  border: 1px solid rgba(220,232,240,.9);
+  border-radius: 24px;
+  box-shadow: 0 12px 45px rgba(31,68,94,.07);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.section-label::before {
+  content: "";
+  width: 45px;
+  height: 8px;
+  border-radius: 10px;
+  background: var(--red);
+}
+
+
+/* =========================================================
+   SOLUTION
+   ========================================================= */
+
+.solution {
+  height: 640px;
+  padding: 30px 40px;
+}
+
+.solution-top {
+  position: relative;
+  height: 315px;
+}
+
+.solution-title {
+  margin-top: 25px;
+
+  font-size: 58px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.solution-desc {
+  width: 790px;
+  margin-top: 20px;
+
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--subtext);
+}
+
+
+/* 中间芯片展示 */
+
+.hero-chip {
+  position: absolute;
+  right: 180px;
+  top: 20px;
+
+  width: 360px;
+  height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-chip::before {
+  content: "";
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.95),
+      rgba(220,235,244,.30) 55%,
+      transparent 72%
+    );
+
+  border: 2px solid rgba(255,255,255,.65);
+}
+
+.hero-chip-box {
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: #41556a;
+  font-size: 21px;
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f9fbfc,
+      #b9c6d0
+    );
+
+  box-shadow:
+    0 22px 35px rgba(39,63,83,.25),
+    inset 0 0 0 2px white;
+}
+
+
+/* solution cards */
+
+.solutions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  height: 255px;
+}
+
+.solution-card {
+  position: relative;
+
+  padding: 5px 30px 20px;
+  text-align: center;
+
+  border-right: 1px solid var(--line);
+}
+
+.solution-card:last-child {
+  border-right: none;
+}
+
+.solution-icon {
+  width: 82px;
+  height: 82px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f5fb;
+
+  font-size: 39px;
+}
+
+.solution-card:nth-child(2) .solution-icon {
+  background: #fff0df;
+}
+
+.solution-card:nth-child(3) .solution-icon {
+  background: #eceaff;
+}
+
+.solution-card:nth-child(4) .solution-icon {
+  background: #e8f7ea;
+}
+
+.solution-name {
+  font-size: 29px;
+  font-weight: 900;
+}
+
+.solution-copy {
+  margin-top: 12px;
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--subtext);
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+   ========================================================= */
+
+.products {
+  margin-top: 14px;
+  height: 675px;
+
+  padding: 26px 25px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.products-sub {
+  font-size: 19px;
+  color: #53677d;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+}
+
+.product {
+  min-height: 565px;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+  border: 1px solid #dce7ee;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8fbfd
+    );
+}
+
+
+/* 芯片 */
+
+.chip-area {
+  height: 155px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip {
+  width: 145px;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3c4249,
+      #0f1318
+    );
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow:
+    16px 20px 25px rgba(35,45,54,.20),
+    inset 0 0 0 2px #697078;
+}
+
+.product-name {
+  margin-top: 5px;
+
+  font-size: 31px;
+  font-weight: 900;
+}
+
+.product-tagline {
+  margin-top: 4px;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.specs {
+  margin-top: 18px;
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+
+  margin-bottom: 13px;
+
+  font-size: 16px;
+  line-height: 1.4;
+
+  color: #344a63;
+}
+
+.spec-icon {
+  font-size: 25px;
+  color: #06182c;
+}
+
+.product-use {
+  margin-top: 10px;
+  padding: 9px 10px;
+
+  border-radius: 8px;
+
+  background: #edf3f8;
+
+  font-size: 14px;
+  color: #304b68;
+}
+
+
+/* =========================================================
+   APPLICATION
+   ========================================================= */
+
+.applications {
+  margin-top: 14px;
+
+  height: 340px;
+
+  padding: 24px 20px 20px;
+}
+
+.application-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.application-sub {
+  font-size: 18px;
+  color: #53677d;
+}
+
+.application-grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 10px;
+}
+
+
+/* 这里是关键：
+   图片和文字彻底分开。
+   图片不会被 icon、标题、说明文字覆盖。
+*/
+
+.application-card {
+  height: 230px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border: 1px solid #dce6ed;
+
+  background: white;
+}
+
+
+/*
+  contain = 图片全部显示
+  不进行 cover 裁切
+*/
+
+.application-image {
+  width: 100%;
+  height: 125px;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #eef3f5;
+}
+
+
+/*
+如果想要照片填满但仍尽量少裁：
+
+.application-image {
+  object-fit: cover;
+}
+*/
+
+.application-body {
+  position: relative;
+
+  height: 105px;
+
+  padding: 12px 12px 8px;
+}
+
+.application-icon {
+  position: absolute;
+
+  top: -25px;
+  left: 12px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 4px solid white;
+
+  background: white;
+
+  font-size: 24px;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.application-title {
+  margin-top: 7px;
+
+  font-size: 17px;
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.application-copy {
+  margin-top: 8px;
+
+  font-size: 14px;
+  line-height: 1.35;
+
+  color: #51667d;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  height: 115px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  padding: 0 45px;
+
+  color: #3e536a;
+}
+
+.footer-brand {
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.japan {
+  text-align: center;
+
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.website {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 20px;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.qr {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #111 0 5px,
+      white 5px 10px
+    );
+
+  border: 5px solid white;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@page {
+  size: A0 portrait;
+  margin: 0;
+}
+
+@media print {
+
+  html,
+  body {
+    width: 841mm;
+    height: 1189mm;
+  }
+
+  .poster {
+    width: 841mm;
+    height: 1189mm;
+
+    margin: 0;
+
+    transform: none;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="poster">
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="brand">
+      <div class="logo-dot"></div>
+
+      ESPRESSIF
+
+      <div class="brand-divider"></div>
+
+      EdgeTech+ 2026
+    </div>
+
+
+    <div class="hero-title">
+      次世代 SoC &<br>
+      プラットフォーム
+    </div>
+
+
+    <div class="hero-subtitle">
+      エッジ AI・HMI・LLM・Matter で広がる可能性
+    </div>
+
+
+    <div class="hero-message">
+      ― つながる、ひろがる、スマートな未来へ
+    </div>
+
+
+    <div class="hero-small">
+
+      小さなチップで、<br>
+      大きな未来をつくる
+
+      <div class="hero-small-en">
+        A BRIGHTER,<br>
+        MORE CONNECTED<br>
+        TOMORROW
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="content">
+
+
+<!-- =====================================================
+     SOLUTION
+===================================================== -->
+
+<section class="solution panel">
+
+  <div class="solution-top">
+
+    <div class="section-label">
+      注目ソリューション
+    </div>
+
+
+    <div class="solution-title">
+      よりスマートな<br>
+      エッジの可能性を広げる
+    </div>
+
+
+    <div class="solution-desc">
+
+      Espressif の SoC、SDK、クラウド、AI ソリューションを
+      組み合わせることで、開発効率と製品価値を高めます。
+      展示会では、次世代 SoC と実用的なプラットフォーム提案を
+      中心にご紹介します。
+
+    </div>
+
+
+    <div class="hero-chip">
+
+      <div class="hero-chip-box">
+        ESPRESSIF
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="solutions">
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        🧠
+      </div>
+
+      <div class="solution-name">
+        Edge AI
+      </div>
+
+      <div class="solution-copy">
+
+        ESP-DL / ESP-NN / ESP-VISION により、<br>
+        画像・音声・センサーの<br>
+        端側推論を実現。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        🖥
+      </div>
+
+      <div class="solution-name">
+        HMI / GMF
+      </div>
+
+      <div class="solution-copy">
+
+        カメラ、LCD、タッチ、音声、<br>
+        マルチメディアを組み合わせ、<br>
+        洗練された UI/UX を構築。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        💬
+      </div>
+
+      <div class="solution-name">
+        LLM
+      </div>
+
+      <div class="solution-copy">
+
+        ESP Private Agents と<br>
+        一般的な LLM 連携で、<br>
+        音声対話や AI エージェント<br>
+        機能を実現。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        ⌂
+      </div>
+
+      <div class="solution-name">
+        Matter
+      </div>
+
+      <div class="solution-copy">
+
+        ESP-Matter により、<br>
+        Wi-Fi / Thread ベースの<br>
+        Matter 機器開発を加速。
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section class="products panel">
+
+  <div class="products-header">
+
+    <div class="section-label">
+      主な製品ラインアップ
+    </div>
+
+    <div class="products-sub">
+      Edge AI / HMI / 低消費電力 / マルチプロトコルを支える注力 SoC
+    </div>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <!-- S31 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+
+        <div class="chip">
+          ESP32-S31
+        </div>
+
+      </div>
+
+
+      <div class="product-name">
+        ESP32-S31
+      </div>
+
+      <div class="product-tagline">
+        高性能 HMI & Edge AI SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon">◉</div>
+          <div>
+            Wi-Fi 6 / Bluetooth 5.4 /<br>
+            IEEE 802.15.4 / Ethernet
+          </div>
+        </div>
+
+
+        <div class="spec">
+          <div class="spec-icon">⚙</div>
+          <div>
+            デュアルコア 32-bit RISC-V、<br>
+            最大 320 MHz
+          </div>
+        </div>
+
+
+        <div class="spec">
+          <div class="spec-icon">▣</div>
+          <div>
+            DVP カメラ、LCD、最大14タッチ、<br>
+            JPEG / 2D 描画
+          </div>
+        </div>
+
+
+        <div class="spec">
+          <div class="spec-icon">⌘</div>
+          <div>
+            ESP-Matter / ESP-GMF /<br>
+            LLM 連携に対応
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：スマート表示機器 / 音声 UI / エッジ AI
+      </div>
+
+    </article>
+
+
+    <!-- C5 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+        <div class="chip">
+          ESP32-C5
+        </div>
+      </div>
+
+
+      <div class="product-name">
+        ESP32-C5
+      </div>
+
+      <div class="product-tagline">
+        デュアルバンド Wi-Fi 6 SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon">◉</div>
+          <div>
+            2.4 / 5 GHz デュアルバンド<br>
+            Wi-Fi 6
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">⌘</div>
+          <div>
+            Bluetooth LE 5 / Zigbee 3.0 /<br>
+            Thread 1.4
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">▣</div>
+          <div>
+            外部 Flash / PSRAM 対応、<br>
+            最大 29 GPIO
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">▥</div>
+          <div>
+            高スループットとマルチ<br>
+            プロトコル接続を両立
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：高性能 IoT / ゲートウェイ / スマート機器
+      </div>
+
+    </article>
+
+
+    <!-- H21 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+        <div class="chip">
+          ESP32-H21
+        </div>
+      </div>
+
+
+      <div class="product-name">
+        ESP32-H21
+      </div>
+
+      <div class="product-tagline">
+        超低消費電力 Thread / Matter SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon">⌁</div>
+          <div>
+            IEEE 802.15.4 + Bluetooth LE
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">⌘</div>
+          <div>
+            Thread / Matter / Zigbee 対応
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">♧</div>
+          <div>
+            オンチップ DC-DC、<br>
+            RX 電流 約 8.2 mA
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">▣</div>
+          <div>
+            32-bit RISC-V 最大 96 MHz、<br>
+            320 KB SRAM
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：センサー / 照明 / ビルオートメーション
+      </div>
+
+    </article>
+
+
+    <!-- H4 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+        <div class="chip">
+          ESP32-H4
+        </div>
+      </div>
+
+
+      <div class="product-name">
+        ESP32-H4
+      </div>
+
+      <div class="product-tagline">
+        Bluetooth LE Audio 対応 SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon">♫</div>
+          <div>
+            Bluetooth 5.4 LE + IEEE 802.15.4
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">▥</div>
+          <div>
+            LE Audio / PAwR /<br>
+            Direction Finding
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">▣</div>
+          <div>
+            デュアルコア 32-bit RISC-V、<br>
+            最大 96 MHz
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon">▦</div>
+          <div>
+            最大 40 GPIO、15 タッチ、<br>
+            外部 PSRAM 対応
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：ウェアラブル / 音響機器 / HMI
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPLICATIONS
+===================================================== -->
+
+<section class="applications panel">
+
+  <div class="application-header">
+
+    <div class="section-label">
+      広がるアプリケーション
+    </div>
+
+    <div class="application-sub">
+      開発から製品化まで、幅広い IoT シーンへ
+    </div>
+
+  </div>
+
+
+  <div class="application-grid">
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/smart-home.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon">
+          ⌂
+        </div>
+
+        <div class="application-title">
+          スマートホーム
+        </div>
+
+        <div class="application-copy">
+          より快適で安心な暮らしを
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/hmi.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon">
+          ▣
+        </div>
+
+        <div class="application-title">
+          スマートディスプレイ / HMI
+        </div>
+
+        <div class="application-copy">
+          直感的で魅力的なユーザー体験
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/vision.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon">
+          ◉
+        </div>
+
+        <div class="application-title">
+          エッジ AI ビジョン
+        </div>
+
+        <div class="application-copy">
+          見えるを、もっとスマートに
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/voice.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon">
+          ♫
+        </div>
+
+        <div class="application-title">
+          音声・AI アプライアンス
+        </div>
+
+        <div class="application-copy">
+          会話で広がる新しい体験
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/industrial.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon">
+          ▥
+        </div>
+
+        <div class="application-title">
+          ビル / 産業オートメーション
+        </div>
+
+        <div class="application-copy">
+          より効率的で持続可能な社会へ
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/wearable.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon">
+          ◉
+        </div>
+
+        <div class="application-title">
+          ウェアラブル / LE Audio
+        </div>
+
+        <div class="application-copy">
+          いつでも、どこでもつながる
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="footer-brand">
+    EMPOWERING A SMARTER, MORE CONNECTED WORLD
+  </div>
+
+
+  <div class="japan">
+
+    2025年5月、楽鑫ジャパン株式会社<br>
+    （Espressif Systems Japan）を設立しました。
+
+  </div>
+
+
+  <div class="website">
+
+    日本語公式サイトはこちら →
+
+    <div class="qr">
+      QR
+    </div>
+
+  </div>
+
+</footer>
+
+
+</div>
+</div>
+
+</body>
+</html>

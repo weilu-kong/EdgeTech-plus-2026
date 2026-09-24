@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espressif EdgeTech+ 2026 Poster</title>
+
+<style>
+/* =========================================================
+   A0 POSTER
+   841 × 1189 mm → CSS 使用同样比例
+   浏览器预览尺寸：1682 × 2378 px
+   ========================================================= */
+
+:root {
+  --navy: #07182a;
+  --navy2: #102942;
+  --text: #0c1728;
+  --subtext: #41536b;
+  --red: #e4002b;
+  --line: #dfe8ef;
+  --panel: rgba(255,255,255,.94);
+  --soft: #f3f8fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #dce7ee;
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+  color: var(--text);
+}
+
+.poster {
+  position: relative;
+  width: 1682px;
+  height: 2378px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #081b2d 0,
+      #102e49 25%,
+      #eef8fc 30%,
+      #f5fbfd 100%
+    );
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  height: 590px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 76% 17%,
+      rgba(255,218,158,.95) 0,
+      rgba(255,169,86,.45) 5%,
+      transparent 19%
+    ),
+    radial-gradient(
+      ellipse at 68% 5%,
+      #254b70 0,
+      #0d2942 43%,
+      #061522 72%
+    );
+}
+
+/*
+  建议把实际地球背景图放到：
+  assets/earth.jpg
+
+  然后取消下面注释：
+*/
+
+/*
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,15,28,.92) 0%,
+      rgba(4,15,28,.40) 55%,
+      rgba(4,15,28,.10) 100%
+    ),
+    url("assets/earth.jpg") center / cover no-repeat;
+}
+*/
+
+.hero-inner {
+  position: absolute;
+  inset: 0;
+  padding: 48px 78px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: white;
+  font-size: 37px;
+  font-weight: 800;
+}
+
+.brand-divider {
+  width: 2px;
+  height: 43px;
+  background: rgba(255,255,255,.8);
+}
+
+.logo-dot {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.hero-title {
+  margin-top: 54px;
+  color: white;
+  font-size: 82px;
+  line-height: 1.08;
+  letter-spacing: -3px;
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  margin-top: 23px;
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.hero-message {
+  margin-top: 22px;
+  color: rgba(255,255,255,.92);
+  font-size: 27px;
+  letter-spacing: 2px;
+}
+
+.hero-small {
+  position: absolute;
+  right: 290px;
+  bottom: 70px;
+
+  color: white;
+  font-size: 23px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.hero-small-en {
+  margin-top: 12px;
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.content {
+  position: relative;
+  margin-top: -18px;
+  padding: 0 34px 32px;
+}
+
+
+/* =========================================================
+   COMMON PANEL
+   ========================================================= */
+
+.panel {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.98),
+      rgba(242,249,252,.95)
+    );
+
+  border: 1px solid rgba(220,232,240,.9);
+  border-radius: 24px;
+  box-shadow: 0 12px 45px rgba(31,68,94,.07);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.section-label::before {
+  content: "";
+  width: 45px;
+  height: 8px;
+  border-radius: 10px;
+  background: var(--red);
+}
+
+
+/* =========================================================
+   SOLUTION
+   ========================================================= */
+
+.solution {
+  height: 640px;
+  padding: 30px 40px;
+}
+
+.solution-top {
+  position: relative;
+  height: 315px;
+}
+
+.solution-title {
+  margin-top: 25px;
+
+  font-size: 58px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.solution-desc {
+  width: 790px;
+  margin-top: 20px;
+
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--subtext);
+}
+
+
+/* 中间芯片展示 */
+
+.hero-chip {
+  position: absolute;
+  right: 180px;
+  top: 20px;
+
+  width: 360px;
+  height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-chip::before {
+  content: "";
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.95),
+      rgba(220,235,244,.30) 55%,
+      transparent 72%
+    );
+
+  border: 2px solid rgba(255,255,255,.65);
+}
+
+.hero-chip-box {
+  position: relative;
+
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  color: #41556a;
+  font-size: 21px;
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f9fbfc,
+      #b9c6d0
+    );
+
+  box-shadow:
+    0 22px 35px rgba(39,63,83,.25),
+    inset 0 0 0 2px white;
+}
+
+
+/* solution cards */
+
+.solutions {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  height: 255px;
+}
+
+.solution-card {
+  position: relative;
+
+  padding: 5px 30px 20px;
+  text-align: center;
+
+  border-right: 1px solid var(--line);
+}
+
+.solution-card:last-child {
+  border-right: none;
+}
+
+.solution-icon {
+  width: 82px;
+  height: 82px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f5fb;
+
+  font-size: 39px;
+}
+
+.solution-card:nth-child(2) .solution-icon {
+  background: #fff0df;
+}
+
+.solution-card:nth-child(3) .solution-icon {
+  background: #eceaff;
+}
+
+.solution-card:nth-child(4) .solution-icon {
+  background: #e7f6f4;
+}
+
+.solution-card:nth-child(5) .solution-icon {
+  background: #e8f7ea;
+}
+
+.solution-name {
+  font-size: 29px;
+  font-weight: 900;
+}
+
+.solution-copy {
+  margin-top: 12px;
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--subtext);
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+   ========================================================= */
+
+.products {
+  margin-top: 14px;
+  height: 675px;
+
+  padding: 26px 25px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.products-sub {
+  font-size: 19px;
+  color: #53677d;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+}
+
+.product {
+  min-height: 565px;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+  border: 1px solid #dce7ee;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8fbfd
+    );
+}
+
+
+/* 芯片 */
+
+.chip-area {
+  height: 155px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip {
+  width: 145px;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3c4249,
+      #0f1318
+    );
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow:
+    16px 20px 25px rgba(35,45,54,.20),
+    inset 0 0 0 2px #697078;
+}
+
+.product-name {
+  margin-top: 5px;
+
+  font-size: 31px;
+  font-weight: 900;
+}
+
+.product-tagline {
+  margin-top: 4px;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.specs {
+  margin-top: 18px;
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+
+  margin-bottom: 13px;
+
+  font-size: 16px;
+  line-height: 1.4;
+
+  color: #344a63;
+}
+
+.spec-icon {
+  font-size: 25px;
+  color: #06182c;
+}
+
+.product-use {
+  margin-top: 10px;
+  padding: 9px 10px;
+
+  border-radius: 8px;
+
+  background: #edf3f8;
+
+  font-size: 14px;
+  color: #304b68;
+}
+
+
+/* =========================================================
+   APPLICATION
+   ========================================================= */
+
+.applications {
+  margin-top: 14px;
+
+  height: 340px;
+
+  padding: 24px 20px 20px;
+}
+
+.application-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.application-sub {
+  font-size: 18px;
+  color: #53677d;
+}
+
+.application-grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 10px;
+}
+
+
+/* 这里是关键：
+   图片和文字彻底分开。
+   图片不会被 icon、标题、说明文字覆盖。
+*/
+
+.application-card {
+  height: 230px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border: 1px solid #dce6ed;
+
+  background: white;
+}
+
+
+/*
+  contain = 图片全部显示
+  不进行 cover 裁切
+*/
+
+.application-image {
+  width: 100%;
+  height: 125px;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #eef3f5;
+}
+
+
+/*
+如果想要照片填满但仍尽量少裁：
+
+.application-image {
+  object-fit: cover;
+}
+*/
+
+.application-body {
+  position: relative;
+
+  height: 105px;
+
+  padding: 12px 12px 8px;
+}
+
+.application-icon {
+  position: absolute;
+
+  top: -25px;
+  left: 12px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 4px solid white;
+
+  background: white;
+
+  font-size: 24px;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.application-title {
+  margin-top: 7px;
+
+  font-size: 17px;
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.application-copy {
+  margin-top: 8px;
+
+  font-size: 14px;
+  line-height: 1.35;
+
+  color: #51667d;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  height: 115px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  padding: 0 45px;
+
+  color: #3e536a;
+}
+
+.footer-brand {
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.japan {
+  text-align: center;
+
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.website {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 20px;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.qr {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #111 0 5px,
+      white 5px 10px
+    );
+
+  border: 5px solid white;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@page {
+  size: A0 portrait;
+  margin: 0;
+}
+
+@media print {
+
+  html,
+  body {
+    width: 841mm;
+    height: 1189mm;
+  }
+
+  .poster {
+    width: 841mm;
+    height: 1189mm;
+
+    margin: 0;
+
+    transform: none;
+  }
+}
+
+
+
+/* =========================================================
+   HIGH-RES VISUAL OVERRIDES — v4
+   Keeps the original user's layout, replacing placeholders
+   with local high-resolution assets. No full-poster image layer.
+   ========================================================= */
+.stage{width:100%;display:flex;justify-content:center;align-items:flex-start;overflow:hidden;background:#dce7ee}
+.poster{transform-origin:top center;flex:0 0 auto}
+
+.hero{
+  background:
+    linear-gradient(90deg,rgba(2,13,25,.88) 0%,rgba(3,16,29,.55) 42%,rgba(3,16,29,.08) 78%,rgba(3,16,29,0) 100%),
+    url("assets/earth.jpg") center 48% / cover no-repeat !important;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 74%,rgba(7,25,39,.14));
+}
+.hero-inner{z-index:1}
+.brand-logo{width:55px;height:55px;object-fit:contain;filter:drop-shadow(0 2px 4px #0003)}
+.logo-dot{display:none!important}
+.hero-corner{
+  position:absolute;right:62px;top:48px;color:white;text-align:left;
+  font-size:14px;line-height:1.42;letter-spacing:4px;font-weight:700;opacity:.9;
+}
+.hero-corner span{display:block;width:34px;height:2px;background:#fff;margin:12px 0 14px;opacity:.85}
+
+.solution{position:relative;overflow:hidden}
+.solution::before{
+  content:"";position:absolute;right:14px;top:7px;width:760px;height:410px;pointer-events:none;
+  background:radial-gradient(circle at 53% 46%,rgba(255,255,255,.98),rgba(226,240,249,.42) 40%,rgba(255,255,255,0) 69%);
+}
+.solution-top{z-index:1}
+.hero-chip{right:205px;top:7px;width:430px;height:315px;z-index:2}
+.hero-chip::before{width:390px;height:390px;background:radial-gradient(circle,rgba(255,255,255,.45),rgba(218,236,247,.13) 58%,transparent 71%);border:2px solid rgba(255,255,255,.75)}
+.hero-chip-image{position:relative;width:400px;height:290px;object-fit:contain;filter:drop-shadow(0 16px 23px rgba(44,72,91,.20))}
+.hero-chip-box{display:none!important}
+.solution-sidecopy{position:absolute;right:47px;top:85px;width:150px;z-index:4;color:#162234;text-align:left}
+.solution-sidecopy b{display:block;font-size:23px;line-height:1.48;font-style:normal}
+.solution-sidecopy i{display:block;width:44px;height:4px;background:var(--red);margin:18px 0 18px}
+.solution-sidecopy span{font-size:12px;line-height:1.55;letter-spacing:3px;color:#42546b}
+.solutions{position:relative;z-index:5}
+.solution-icon{color:#0b1728}
+.solution-icon svg{width:44px;height:44px;display:block}
+
+.chip-area{height:155px}
+.chip{display:none!important}
+.chip-image{display:block;max-width:168px;max-height:148px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(13px 19px 15px rgba(31,45,57,.18))}
+.spec-icon{display:flex;align-items:flex-start;justify-content:center;padding-top:1px}
+.spec-icon svg{width:28px;height:28px;display:block}
+
+.application-image{object-fit:cover!important;object-position:center!important;background:#eef3f5}
+.application-icon{color:#0c1728}
+.application-icon svg{width:25px;height:25px;display:block}
+.qr{display:none!important}
+.qr-img{width:78px;height:78px;object-fit:contain;background:white;padding:2px}
+
+/* More closely match the approved reference proportions */
+.content{margin-top:-20px}
+.solution{height:600px}
+.solution-top{height:268px}
+.solution-title{font-size:46px;margin-top:14px}
+.solution-desc{font-size:18px;margin-top:12px;width:720px}
+.solutions{height:248px;grid-template-columns:repeat(5,1fr)}
+.solution-card{padding:2px 12px 8px}
+.solution-icon{width:58px;height:58px;margin-bottom:6px}
+.solution-icon svg{width:32px;height:32px}
+.solution-name{font-size:20px}
+.solution-copy{font-size:14px;margin-top:6px;line-height:1.4}
+.products{height:730px}
+.applications{height:338px}
+.hero-chip{top:0;height:250px}
+.hero-chip-image{
+  width:280px;height:230px;object-fit:contain;object-position:center;
+  -webkit-mask-image:none;mask-image:none;
+}
+.product{overflow:hidden}
+.application-card{height:229px}
+.footer{height:113px}
+
+/* print the entire fixed design canvas as one uniformly scaled unit */
+@media print{
+  html,body{width:841mm!important;height:1189mm!important;overflow:hidden;background:white}
+  .stage{width:841mm;height:1189mm;display:block;overflow:hidden;background:white}
+  .poster{
+    width:1682px!important;height:2378px!important;margin:0!important;
+    transform:scale(1.88941736)!important;transform-origin:top left!important;
+  }
+}
+
+
+/* v5 optical refinements */
+.hero-submessage{margin-top:14px;color:rgba(255,255,255,.86);font-size:18px;letter-spacing:1.5px;padding-left:105px}
+.hero{height:520px}
+.hero-title{font-size:62px;line-height:1.08;margin-top:32px;letter-spacing:-2px}
+.hero-subtitle{font-size:28px;margin-top:14px}
+.hero-message{font-size:22px;margin-top:12px}
+.hero-small{right:285px;bottom:56px;font-size:21px}
+.hero-corner{right:58px;top:42px}
+
+.hero-chip{right:208px;top:4px;width:360px;height:248px;overflow:visible}
+.hero-chip-image{
+  width:280px;height:230px;object-fit:contain;object-position:center;
+  -webkit-mask-image:none;mask-image:none;
+}
+.solution-sidecopy{right:38px;top:79px;width:142px}
+.solution-sidecopy b{font-size:22px}
+.solution-sidecopy span{font-size:11px;letter-spacing:2.7px}
+
+.chip-image{max-width:154px;max-height:142px}
+.product-name{font-size:30px}
+.product-tagline{font-size:17px}
+
+.application-image{height:126px}
+.application-body{height:104px;padding-top:11px}
+.application-title{font-size:16px}
+.application-copy{font-size:13px}
+
+/* v6: pack the A0 canvas, keep the side slogan out of the Matter card */
+.poster{
+  display:flex;flex-direction:column;
+  background:#e7f2f8!important;
+}
+.hero{
+  flex:0 0 540px;height:540px!important;
+  background:url("assets/hero-earth.png") center / 100% 100% no-repeat!important;
+}
+.hero::after{display:none!important}
+.hero-inner{z-index:3}
+.content{flex:1;display:flex;flex-direction:column;margin-top:-28px;min-height:0;gap:16px;position:relative;z-index:4}
+.solution{
+  flex:0 0 auto;height:auto!important;overflow:visible!important;
+  padding:20px 32px 16px!important;
+  background:
+    radial-gradient(720px 280px at 74% 8%, rgba(255,255,255,.85), transparent 70%),
+    linear-gradient(180deg, #f7fbfd 0%, #e4eef5 100%)!important;
+}
+.solution-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.55), rgba(220,234,243,.9));
+  border-radius:16px;
+}
+.products{
+  flex:0 0 auto;height:auto!important;margin-top:0!important;padding-bottom:18px;
+  background:linear-gradient(180deg, #f4f9fc 0%, #e3eef5 100%)!important;
+}
+.product{
+  min-height:0;height:auto;overflow:visible;
+  background:linear-gradient(180deg,#f7fbfe 0%,#e4eef6 100%)!important;
+}
+.specs{
+  background:#f4f9fc;
+  border:1px solid #e1ebf2;
+  border-radius:12px;
+  padding:8px 8px 2px;
+}
+.applications{
+  flex:0 0 auto;height:auto!important;margin-top:0!important;
+  display:flex;flex-direction:column;padding-bottom:14px;
+  background:linear-gradient(180deg, #f6fbfc 0%, #e6f0f6 100%)!important;
+}
+.application-card{height:auto;display:flex;flex-direction:column;overflow:hidden;background:#f7fbfd!important}
+.application-body{
+  flex:0 0 auto;height:auto!important;padding:22px 12px 12px;
+  background:linear-gradient(180deg,#f7fbfd,#dceaf3)!important;
+}
+.solution::before{display:none!important}
+.solution-top{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 430px 156px;
+  grid-template-areas:"label chip side" "title chip side" "desc chip side";
+  column-gap:16px;align-items:center;height:auto!important;
+}
+.solution .section-label{grid-area:label}
+.solution-title{grid-area:title;margin-top:4px!important;font-size:40px!important;line-height:1.12}
+.solution-desc{grid-area:desc;width:auto!important;margin-top:8px!important;font-size:17px!important}
+.hero-chip{
+  grid-area:chip;position:relative!important;right:auto!important;top:auto!important;
+  width:430px!important;height:330px!important;overflow:visible!important;
+}
+.hero-chip::before{display:none!important}
+.hero-chip-image{
+  width:430px!important;height:330px!important;object-fit:contain!important;object-position:center;
+  -webkit-mask-image:none!important;mask-image:none!important;
+}
+.solution-sidecopy{
+  grid-area:side;position:static!important;right:auto!important;top:auto!important;
+  width:auto!important;z-index:1!important;
+}
+.solutions{height:auto!important;margin-top:8px}
+.chip-area{height:210px!important}
+.chip-image{max-width:196px!important;max-height:194px!important}
+.products{flex:0 0 auto;height:auto!important;margin-top:0!important;padding-bottom:18px}
+.product{min-height:0;height:auto;overflow:visible}
+.applications{
+  flex:0 0 auto;height:auto!important;margin-top:0!important;
+  display:flex;flex-direction:column;padding-bottom:14px;
+}
+.application-grid{flex:none;align-items:stretch}
+.application-card{height:auto;display:flex;flex-direction:column;overflow:hidden}
+.application-image{
+  flex:0 0 126px;width:100%;height:126px!important;min-height:0;
+  object-fit:cover!important;object-position:center;
+}
+.application-body{flex:0 0 auto;height:auto!important;padding:22px 12px 12px}
+.application-title{font-size:14px;line-height:1.25;height:1.25em;white-space:nowrap}
+.application-copy{
+  font-size:13px;line-height:1.35;height:calc(1.35em * 6);overflow:hidden;
+}
+.footer{flex:0 0 102px;height:102px!important}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="stage" id="stage">
+<div class="poster" id="poster">
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="brand">
+      <img class="brand-logo" src="assets/espressif-mark.png" alt="Espressif">
+
+      ESPRESSIF
+
+      <div class="brand-divider"></div>
+
+      EdgeTech+ 2026
+    </div>
+
+    <div class="hero-corner">
+      <div>SMART<br>CONNECTS<br>MORE</div>
+      <span></span>
+      <div>SILICON<br>PEOPLE<br>A SMARTER<br>TOMORROW</div>
+    </div>
+
+
+    <div class="hero-title">
+      次世代 SoC &<br>
+      プラットフォーム
+    </div>
+
+
+    <div class="hero-subtitle">
+      エッジ AI・HMI・RainMaker・MCP で広がる可能性
+    </div>
+
+
+    <div class="hero-message">
+      ― つながる、ひろがる、スマートな未来へ
+    </div>
+
+    <div class="hero-submessage">
+      エッジからクラウドまで、より高性能で持続可能な社会を
+    </div>
+
+
+    <div class="hero-small">
+
+      小さなチップで、<br>
+      大きな未来をつくる
+
+      <div class="hero-small-en">
+        A BRIGHTER,<br>
+        MORE CONNECTED<br>
+        TOMORROW
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="content">
+
+
+<!-- =====================================================
+     SOLUTION
+===================================================== -->
+
+<section class="solution panel">
+
+  <div class="solution-top">
+
+    <div class="section-label">
+      注目ソリューション
+    </div>
+
+
+    <div class="solution-title">
+      よりスマートな<br>
+      エッジの可能性を広げる
+    </div>
+
+
+    <div class="solution-desc">
+
+      Espressif の SoC、SDK、クラウド、AI ソリューションを
+      組み合わせることで、開発効率と製品価値を高めます。
+      展示会では、次世代 SoC と実用的なプラットフォーム提案を
+      中心にご紹介します。
+
+    </div>
+
+
+    <div class="hero-chip">
+
+      <img class="hero-chip-image" src="assets/solution-concept.png" alt="ESP32-S31 の公式ソフトウェア概念図">
+
+    </div>
+
+    <div class="solution-sidecopy">
+      <b>エッジの<br>可能性を<br>その先へ</b>
+      <i></i>
+      <span>MORE<br>POSSIBILITIES<br>AT THE EDGE</span>
+    </div>
+
+  </div>
+
+
+  <div class="solutions">
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9.5 4.5a3 3 0 0 0-5 2.2A3.5 3.5 0 0 0 4 13a3 3 0 0 0 3 4.5c.5 1.4 1.5 2 2.5 2.2V4.5Z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M14.5 4.5a3 3 0 0 1 5 2.2A3.5 3.5 0 0 1 20 13a3 3 0 0 1-3 4.5c-.5 1.4-1.5 2-2.5 2.2V4.5Z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M8 8h1.5M15 8h1.5M8 13h1.5M14.5 13H16M12 5v14"/></svg>
+      </div>
+
+      <div class="solution-name">
+        Edge AI
+      </div>
+
+      <div class="solution-copy">
+
+        ESP-DL / ESP-NN / ESP-VISION により、<br>
+        画像・音声・センサーの<br>
+        端側推論を実現。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="4" width="18" height="12" rx="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M8 20h8M12 16v4"/></svg>
+      </div>
+
+      <div class="solution-name">
+        HMI / GMF
+      </div>
+
+      <div class="solution-copy">
+
+        カメラ、LCD、タッチ、音声、<br>
+        マルチメディアを組み合わせ、<br>
+        洗練された UI/UX を構築。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 18h10a4 4 0 0 0 .4-8 6 6 0 0 0-11.5-1.5A4 4 0 0 0 7 18Z"/></svg>
+      </div>
+
+      <div class="solution-name">
+        RainMaker
+      </div>
+
+      <div class="solution-copy">
+
+        ESP RainMaker と<br>
+        ESP Private Agents で、<br>
+        クラウド連携と音声対話を実現。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M8 8h8M8 12h8M8 16h5"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="4" width="18" height="16" rx="2"/></svg>
+      </div>
+
+      <div class="solution-name">
+        MCP / Chatbot
+      </div>
+
+      <div class="solution-copy">
+
+        ドキュメント チャットボットと<br>
+        Documentation MCP で、<br>
+        開発時の調査と実装を支援。
+
+      </div>
+
+    </div>
+
+
+    <div class="solution-card">
+
+      <div class="solution-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m3 11 9-8 9 8"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 10v10h14V10M9 20v-6h6v6"/></svg>
+      </div>
+
+      <div class="solution-name">
+        Matter
+      </div>
+
+      <div class="solution-copy">
+
+        ESP-Matter により、<br>
+        Wi-Fi / Thread ベースの<br>
+        Matter 機器開発を加速。
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section class="products panel">
+
+  <div class="products-header">
+
+    <div class="section-label">
+      主な製品ラインアップ
+    </div>
+
+    <div class="products-sub">
+      Edge AI / HMI / 低消費電力 / マルチプロトコルを支える注力 SoC
+    </div>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <!-- S31 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+
+        <img class="chip-image" src="assets/chip-s31.png" alt="ESP32-S31">
+
+      </div>
+
+
+      <div class="product-name">
+        ESP32-S31
+      </div>
+
+      <div class="product-tagline">
+        高性能 HMI & Edge AI SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5a10 10 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0M11 18.5a2 2 0 0 1 2 0"/><circle cx="12" cy="21" r="1" fill="currentColor"/></svg></div>
+          <div>
+            Wi-Fi 6 / Bluetooth 5.4（LE Audio）<br>
+            クラシック Bluetooth / 802.15.4
+          </div>
+        </div>
+
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="7" width="10" height="10" rx="1"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
+          <div>
+            デュアルコア RISC-V<br>
+            最大 320 MHz、128-bit SIMD
+          </div>
+        </div>
+
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
+          <div>
+            SRAM 512 KB、GPIO 60<br>
+            外部 Flash / DDR PSRAM
+          </div>
+        </div>
+
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 7h4l2-2h4l2 2h4v11H4Z"/><circle fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12.5" r="3.5"/></svg></div>
+          <div>
+            Ethernet 1000 Mbps<br>
+            DVP / LCD、タッチ 14、JPEG
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：スマートディスプレイ / 音声 UI / エッジ AI
+      </div>
+
+    </article>
+
+
+    <!-- C5 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+        <img class="chip-image" src="assets/chip-c5.png" alt="ESP32-C5">
+      </div>
+
+
+      <div class="product-name">
+        ESP32-C5
+      </div>
+
+      <div class="product-tagline">
+        デュアルバンド Wi-Fi 6 SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5a10 10 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0M11 18.5a2 2 0 0 1 2 0"/><circle cx="12" cy="21" r="1" fill="currentColor"/></svg></div>
+          <div>
+            2.4 / 5 GHz Wi-Fi 6<br>
+            Bluetooth 5（LE）/ 802.15.4
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="7" width="10" height="10" rx="1"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
+          <div>
+            シングルコア RISC-V<br>
+            最大 240 MHz
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
+          <div>
+            SRAM 384 KB、GPIO 29<br>
+            外部 Flash / PSRAM
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 14v-4M8 17V7M12 20V4M16 17V7M20 14v-4"/></svg></div>
+          <div>
+            TWT / OFDMA<br>
+            Thread / Zigbee / Matter
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：無線カメラ / ゲートウェイ / 混雑環境の家電
+      </div>
+
+    </article>
+
+
+    <!-- H21 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+        <img class="chip-image" src="assets/chip-h21.png" alt="ESP32-H21">
+      </div>
+
+
+      <div class="product-name">
+        ESP32-H21
+      </div>
+
+      <div class="product-tagline">
+        超低消費電力 Thread / Matter SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5a10 10 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0M11 18.5a2 2 0 0 1 2 0"/><circle cx="12" cy="21" r="1" fill="currentColor"/></svg></div>
+          <div>
+            Bluetooth 5（LE）<br>
+            Thread 1.4 / Zigbee 3.0
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="7" width="10" height="10" rx="1"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
+          <div>
+            シングルコア RISC-V<br>
+            最大 96 MHz
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
+          <div>
+            SRAM 320 KB、GPIO 19<br>
+            ROM 128 KB
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 4C12 4 6 7 6 14c0 3 2 5 5 5 7 0 9-8 9-15Z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 21c3-6 7-10 12-13"/></svg></div>
+          <div>
+            内蔵 DC-DC<br>
+            送信 最大 20 dBm
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：センサー / 照明 / ビルオートメーション
+      </div>
+
+    </article>
+
+
+    <!-- H4 -->
+
+    <article class="product">
+
+      <div class="chip-area">
+        <img class="chip-image" src="assets/chip-h4.png" alt="ESP32-H4">
+      </div>
+
+
+      <div class="product-name">
+        ESP32-H4
+      </div>
+
+      <div class="product-tagline">
+        Bluetooth LE Audio 対応 SoC
+      </div>
+
+
+      <div class="specs">
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5a10 10 0 0 1 14 0M8 15.5a6 6 0 0 1 8 0M11 18.5a2 2 0 0 1 2 0"/><circle cx="12" cy="21" r="1" fill="currentColor"/></svg></div>
+          <div>
+            Bluetooth 5.4（LE）<br>
+            Thread 1.4 / Zigbee 3.0
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="7" width="10" height="10" rx="1"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
+          <div>
+            デュアルコア RISC-V<br>
+            最大 96 MHz、DSP
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
+          <div>
+            SRAM 384 KB、GPIO 40<br>
+            タッチ 15、外部 PSRAM
+          </div>
+        </div>
+
+        <div class="spec">
+          <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 18V5l10-2v13"/><circle fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" cx="6" cy="18" r="3"/><circle fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="16" r="3"/></svg></div>
+          <div>
+            LE Audio / PAwR / 方向検知<br>
+            Bluetooth 6.0 認証
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="product-use">
+        用途：ウェアラブル / LE Audio / タッチ HMI
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPLICATIONS
+===================================================== -->
+
+<section class="applications panel">
+
+  <div class="application-header">
+
+    <div class="section-label">
+      広がるアプリケーション
+    </div>
+
+    <div class="application-sub">
+      開発から製品化まで、幅広い IoT シーンへ
+    </div>
+
+  </div>
+
+
+  <div class="application-grid">
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/smart-home.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m3 11 9-8 9 8"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 10v10h14V10M9 20v-6h6v6"/></svg></div>
+
+        <div class="application-title">
+          スマートホーム
+        </div>
+
+        <div class="application-copy">
+          Matter で照明とセンサーを<br>一つのネットワークにまとめます。<br>ESP-Matter と Wi-Fi / Thread が<br>相互接続の実装を支えます。<br>低消費電力無線とセキュアブートで<br>電池機器も常時接続機器も載せます。
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/hmi.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="4" width="18" height="12" rx="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M8 20h8M12 16v4"/></svg></div>
+
+        <div class="application-title">
+          スマートディスプレイ / HMI
+        </div>
+
+        <div class="application-copy">
+          カメラ、LCD、タッチをまとめて<br>一つの画面体験にします。<br>ESP-GMF が表示と音声を組み<br>操作の流れをつなぎます。<br>DVP、JPEG、2D 描画が<br>滑らかな UI の土台になります。
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/vision.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 7h4l2-2h4l2 2h4v11H4Z"/><circle fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12.5" r="3.5"/></svg></div>
+
+        <div class="application-title">
+          エッジ AI ビジョン
+        </div>
+
+        <div class="application-copy">
+          映像を端末の中で認識し<br>必要な結果だけを送ります。<br>ESP-DL / ESP-NN / ESP-VISION が<br>画像の端側推論を支えます。<br>DVP 入力と SIMD 演算が<br>遅延を抑えた判断を可能にします。
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/voice.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="9" y="3" width="6" height="11" rx="3"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></div>
+
+        <div class="application-title">
+          音声・AI アプライアンス
+        </div>
+
+        <div class="application-copy">
+          話しかけると、音声で応えます。<br>RainMaker と Private Agents が<br>クラウドの対話を受けます。<br>クラシック Bluetooth と<br>LE Audio、マイク入力が<br>新しい音声体験をつなぎます。
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/industrial.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 21V7l7-4v18M12 21h8V10l-8-3M8 10h1M8 14h1M8 18h1M15 13h1M15 17h1"/></svg></div>
+
+        <div class="application-title">
+          ビル / 産業オートメーション
+        </div>
+
+        <div class="application-copy">
+          照明とセンサーを現場の<br>ネットワークで動かします。<br>ESP-Matter と Thread / Zigbee が<br>メッシュの構築を支えます。<br>低消費電力無線と Ethernet が<br>電池ノードと幹線を結びます。
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="application-card">
+
+      <img
+        class="application-image"
+        src="assets/wearable.jpg"
+      >
+
+      <div class="application-body">
+
+        <div class="application-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="6" width="10" height="12" rx="3"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 6V3h6v3M9 18v3h6v-3"/></svg></div>
+
+        <div class="application-title">
+          ウェアラブル / LE Audio
+        </div>
+
+        <div class="application-copy">
+          身につける機器で音楽と<br>通知を低電力で届けます。<br>ESP-BLE-AUDIO が LE Audio の<br>放送と双方向音声を実装します。<br>PAwR と方向検知、タッチが<br>小型筐体の操作と測位を足します。
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="footer-brand">
+    EMPOWERING A SMARTER, MORE CONNECTED WORLD
+  </div>
+
+
+  <div class="japan">
+
+    2025 年 5 月、楽鑫ジャパン株式会社<br>
+    （Espressif Systems Japan）を設立しました。
+
+  </div>
+
+
+  <div class="website">
+
+    日本語公式サイトはこちら →
+
+    <img class="qr-img" src="assets/qr-ja.png" alt="Espressif Japanese website QR">
+
+  </div>
+
+</footer>
+
+
+</div>
+</div>
+</div>
+<script>
+(function(){
+  const poster=document.getElementById("poster"),stage=document.getElementById("stage");
+  function fit(){
+    if(window.matchMedia("print").matches) return;
+    const s=Math.min((window.innerWidth-24)/1682,1);
+    poster.style.transform=`scale(${s})`;
+    stage.style.height=(2378*s)+"px";
+  }
+  addEventListener("resize",fit); fit();
+})();
+</script>
+</body>
+</html>
