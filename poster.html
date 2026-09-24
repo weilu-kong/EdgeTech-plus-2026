@@ -946,6 +946,121 @@ body {
 }
 .footer{flex:0 0 102px;height:102px!important}
 
+
+/* =========================================================
+   v7 — larger SoC visuals + ESP-Mosaico featured dev board
+   ========================================================= */
+
+/* The chip PNGs include generous transparent margins.
+   Scale them optically while reducing the reserved vertical whitespace. */
+.chip-area{
+  height:180px!important;
+  overflow:visible!important;
+}
+.chip-image{
+  max-width:220px!important;
+  max-height:205px!important;
+  transform:scale(1.18);
+  transform-origin:center center;
+}
+.products-header{margin-bottom:10px!important}
+
+/* Featured development board between SoCs and applications */
+.mosaico{
+  flex:0 0 auto;
+  margin-top:0!important;
+  padding:14px 22px!important;
+  min-height:164px;
+  background:
+    radial-gradient(420px 180px at 86% 45%, rgba(255,255,255,.96), rgba(232,242,248,.70) 58%, transparent 76%),
+    linear-gradient(135deg,#edf6fb 0%,#dfeef6 100%)!important;
+}
+.mosaico-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 420px;
+  gap:22px;
+  align-items:center;
+}
+.mosaico-copy{
+  min-width:0;
+  padding:2px 8px 2px 8px;
+}
+.mosaico-kicker{
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:1.4px;
+  color:#53677d;
+  margin-bottom:2px;
+}
+.mosaico-row{
+  display:flex;
+  align-items:baseline;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.mosaico-name{
+  font-size:34px;
+  line-height:1.05;
+  font-weight:900;
+  color:#0c1728;
+}
+.mosaico-tagline{
+  font-size:18px;
+  font-weight:800;
+  color:#243b54;
+}
+.mosaico-desc{
+  margin-top:7px;
+  font-size:15px;
+  line-height:1.45;
+  color:#41566e;
+}
+.mosaico-points{
+  margin-top:7px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.mosaico-point{
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.78);
+  border:1px solid #d7e5ee;
+  font-size:12px;
+  font-weight:800;
+  color:#29445f;
+}
+.mosaico-media{
+  display:block;
+  position:relative;
+  height:136px;
+  overflow:hidden;
+  border-radius:14px;
+  border:1px solid rgba(194,213,226,.95);
+  background:#fff;
+  text-decoration:none;
+}
+.mosaico-media img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+.mosaico-media::after{
+  content:"Built for Coding Agents.";
+  position:absolute;
+  right:12px;
+  bottom:9px;
+  padding:5px 9px;
+  border-radius:7px;
+  background:rgba(5,18,31,.84);
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.4px;
+}
+
 </style>
 </head>
 
@@ -1312,8 +1427,8 @@ body {
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 14v-4M8 17V7M12 20V4M16 17V7M20 14v-4"/></svg></div>
           <div>
-            TWT / OFDMA<br>
-            Thread / Zigbee / Matter
+            Wi-Fi CSI センシング<br>
+            802.11mc FTM 測距
           </div>
         </div>
 
@@ -1321,7 +1436,7 @@ body {
 
 
       <div class="product-use">
-        用途：ゲートウェイ / 家電 / Wi-Fi モジュール
+        用途：Wi-Fi センシング / 測距 / デュアルバンド IoT
       </div>
 
     </article>
@@ -1450,6 +1565,59 @@ body {
 
     </article>
 
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED DEV BOARD — ESP-MOSAICO
+===================================================== -->
+
+<section class="mosaico panel">
+
+  <div class="mosaico-inner">
+
+    <div class="mosaico-copy">
+
+      <div class="mosaico-kicker">
+        注目開発ボード
+      </div>
+
+      <div class="mosaico-row">
+        <div class="mosaico-name">ESP-Mosaico</div>
+        <div class="mosaico-tagline">
+          ESP32-S31 搭載 — Coding Agent 向けモジュール型開発ボード
+        </div>
+      </div>
+
+      <div class="mosaico-desc">
+        480 × 480 タッチディスプレイ、音声、6軸 IMU、デュアル磁気センサー、カメラ拡張に対応。<br>
+        HMI・エッジAI・AI Coding のプロトタイピングを加速します。
+      </div>
+
+      <div class="mosaico-points">
+        <span class="mosaico-point">Chat Coding</span>
+        <span class="mosaico-point">Vibe Coding</span>
+        <span class="mosaico-point">Touch HMI</span>
+        <span class="mosaico-point">Audio</span>
+        <span class="mosaico-point">Motion Sensing</span>
+        <span class="mosaico-point">Camera Expansion</span>
+      </div>
+
+    </div>
+
+    <a class="mosaico-media"
+       href="https://mosaico.espressif.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="ESP-Mosaico official website">
+      <img
+        src="https://mosaico.espressif.com/images/makers-foreground-cropped.webp"
+        alt="ESP-Mosaico official product image">
+    </a>
 
   </div>
 
