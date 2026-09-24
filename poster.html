@@ -1435,6 +1435,27 @@ body {
 .qr-corner.bl{left:3px;bottom:3px;border-width:0 0 2px 2px;border-radius:0 0 0 5px}
 .qr-corner.br{right:3px;bottom:3px;border-width:0 2px 2px 0;border-radius:0 0 5px 0}
 
+
+/* =========================================================
+   v13 — selected QR artwork as a single image asset
+   ========================================================= */
+.website{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+}
+.website a{
+  display:block;
+  line-height:0;
+}
+.qr-selected-card{
+  display:block;
+  width:200px;
+  height:auto;
+  max-height:108px;
+  object-fit:contain;
+}
+
 </style>
 </head>
 
@@ -2189,43 +2210,14 @@ body {
 
 
   <div class="website">
-
-    <a class="qr-home-card"
-       href="https://www.espressif.com/ja-jp"
+    <a href="https://www.espressif.com/ja-jp/"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="Espressif 日本語公式サイト">
-
-      <div class="qr-home-left">
-
-        <div class="qr-home-brand">
-          <img class="qr-home-logo" src="assets/espressif-mark.png" alt="">
-          <span class="qr-home-word">ESPRESSIF</span>
-        </div>
-
-        <div class="qr-home-rule"></div>
-
-        <div class="qr-home-jp">
-          日本語公式サイト<br>
-          はこちら<span class="arrow">›</span>
-        </div>
-
-        <div class="qr-home-en">
-          SCAN TO VISIT ESPRESSIF HOMEPAGE
-        </div>
-
-      </div>
-
-      <div class="qr-home-code">
-        <span class="qr-corner tl"></span>
-        <span class="qr-corner tr"></span>
-        <span class="qr-corner bl"></span>
-        <span class="qr-corner br"></span>
-        <img src="assets/qr-ja.png" alt="Espressif 日本語公式サイト QR コード">
-      </div>
-
+      <img class="qr-selected-card"
+           src="assets/qr-homepage-card.webp"
+           alt="Espressif 日本語公式サイト QR コード">
     </a>
-
   </div>
 
 </footer>
