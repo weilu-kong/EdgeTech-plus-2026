@@ -755,7 +755,7 @@ body {
   background:linear-gradient(180deg,transparent 74%,rgba(7,25,39,.14));
 }
 .hero-inner{z-index:1}
-.brand-logo{width:55px;height:55px;object-fit:contain;filter:drop-shadow(0 2px 4px #0003)}
+.brand-logo{width:55px;height:55px;object-fit:contain}
 .logo-dot{display:none!important}
 .hero-corner{
   position:absolute;right:62px;top:48px;color:white;text-align:left;
@@ -939,10 +939,14 @@ body {
   flex:0 0 126px;width:100%;height:126px!important;min-height:0;
   object-fit:cover!important;object-position:center;
 }
-.application-body{flex:0 0 auto;height:auto!important;padding:22px 12px 12px}
+.application-body{flex:1 1 auto;height:auto!important;padding:22px 12px 12px;display:flex;flex-direction:column}
 .application-title{font-size:14px;line-height:1.25;height:1.25em;white-space:nowrap}
 .application-copy{
-  font-size:13px;line-height:1.35;height:calc(1.35em * 6);overflow:hidden;
+  font-size:13px;line-height:1.35;height:auto;overflow:visible;
+}
+.application-soc{
+  margin-top:auto;padding-top:6px;font-size:11px;line-height:1.25;font-weight:800;color:#162234;
+  white-space:nowrap;
 }
 .footer{flex:0 0 102px;height:102px!important}
 
@@ -1176,7 +1180,7 @@ body {
 /* Keep the two Japanese technical terms intact and move the whole block left. */
 .solution-sidecopy{
   width:245px!important;
-  transform:translateX(-54px);
+  transform:translateX(-74px);
 }
 .solution-sidecopy b{
   white-space:nowrap;
@@ -1467,7 +1471,7 @@ body {
   flex:0 0 102px!important;
   height:102px!important;
 
-  position:static!important;
+  position:relative!important;
   transform:none!important;
   z-index:auto!important;
 
@@ -1485,6 +1489,12 @@ body {
 }
 
 .japan{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%);
+  width:max-content;
+  text-align:center!important;
   font-size:14px!important;
   line-height:1.35!important;
 }
@@ -1529,7 +1539,7 @@ body {
   <div class="hero-inner">
 
     <div class="brand">
-      <img class="brand-logo" src="assets/espressif-mark.png" alt="Espressif">
+      <img class="brand-logo" src="assets/espressif-mark.svg" alt="Espressif">
 
       ESPRESSIF
 
@@ -1552,7 +1562,7 @@ body {
 
 
     <div class="hero-subtitle">
-      エッジ AI・HMI・Cloud / AI Agent・Matter が拓く新たな可能性
+      エッジ AI・HMI・クラウド・AI エージェント・Matter が拓く、新たな可能性
     </div>
 
 
@@ -1561,7 +1571,7 @@ body {
     </div>
 
     <div class="hero-submessage">
-      エッジからクラウドまで、高性能・低消費電力な製品開発を加速
+      エッジからクラウドまで、高性能と低消費電力を両立する製品開発を加速
     </div>
 
 
@@ -1606,10 +1616,8 @@ body {
 
     <div class="solution-desc">
 
-      Espressif の SoC・モジュール、SDK、AI、クラウドを組み合わせ、
-      エッジからクラウドまで一貫した開発を支援します。
-      次世代 SoC と実用的なソフトウェアプラットフォームで、
-      製品開発と市場投入を加速します。
+      SoC・モジュールからクラウドまで一気通貫。 <br>
+      充実した開発プラットフォームで、次世代製品の市場投入を強力にサポートします。
 
     </div>
 
@@ -1621,9 +1629,9 @@ body {
     </div>
 
     <div class="solution-sidecopy">
-      <b><span class="jp-term">ディープラーニング</span>＆<br><span class="jp-term">エッジコンピューティング</span></b>
+      <b><span class="jp-term">ディープラーニング</span>＆<br><span class="jp-term">エッジコンピューティング </span></b>
       <i></i>
-      <span>DEEP LEARNING<br>&amp; EDGE<br>COMPUTING</span>
+      <span>DEEP LEARNING &amp;<br> EDGE COMPUTING</span>
     </div>
 
   </div>
@@ -1665,9 +1673,9 @@ body {
 
       <div class="solution-copy">
 
-        音声・映像・画像処理を<br>
-        柔軟に連携し、<br>
-        リッチな HMI / UI/UX を構築。
+        音声・映像・画像処理を <br>
+        柔軟に組み合わせ、 <br>
+        リッチな HMI / UI を構築。
 
       </div>
 
@@ -1687,8 +1695,8 @@ body {
       <div class="solution-copy">
 
         ESP RainMaker でデバイスを管理し、<br>
-        ESP Private Agents で<br>
-        AI 体験を拡張。
+        ESP Private Agents で <br>
+        AI エージェントと連携。
 
       </div>
 
@@ -1702,7 +1710,7 @@ body {
       </div>
 
       <div class="solution-name">
-        MCP / Chatbot
+        Chatbot / MCP サーバー
       </div>
 
       <div class="solution-copy">
@@ -1754,7 +1762,7 @@ body {
     </div>
 
     <div class="products-sub">
-      用途に応じて選べる、次世代 IoT 向け注力 SoC
+      用途に応じて選べる、次世代 IoT 向け推奨 SoC
     </div>
 
   </div>
@@ -1797,8 +1805,8 @@ body {
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="7" width="10" height="10" rx="1"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
           <div>
-            デュアルコア RISC-V<br>
-            最大 320 MHz、128-bit データバス / SIMD
+            デュアルコア 最大 320 MHz、<br>
+            1 コアに 128-bit データパス・SIMD
           </div>
         </div>
 
@@ -1806,7 +1814,7 @@ body {
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
           <div>
-            SRAM 512 KB、GPIO 60<br>
+            SRAM 512 KB、GPIO x 60<br>
             Flash / PSRAM 同時アクセス
           </div>
         </div>
@@ -1869,7 +1877,7 @@ body {
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
           <div>
-            SRAM 384 KB、GPIO 29<br>
+            SRAM 384 KB、GPIO x 29<br>
             外部 Flash / PSRAM
           </div>
         </div>
@@ -1877,8 +1885,8 @@ body {
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 14v-4M8 17V7M12 20V4M16 17V7M20 14v-4"/></svg></div>
           <div>
-            Wi-Fi CSI センシング<br>
-            802.11mc FTM 測距
+            より安定した Wi-Fi 接続 <br>
+            Wi-Fi CSI センシング
           </div>
         </div>
 
@@ -1931,7 +1939,7 @@ body {
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
           <div>
-            SRAM 320 KB、GPIO 19<br>
+            SRAM 320 KB、GPIO x 19<br>
             ROM 128 KB
           </div>
         </div>
@@ -1940,7 +1948,7 @@ body {
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 4C12 4 6 7 6 14c0 3 2 5 5 5 7 0 9-8 9-15Z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 21c3-6 7-10 12-13"/></svg></div>
           <div>
             内蔵 DC-DC<br>
-            送信 最大 20 dBm
+            最大送信出力 20 dBm
           </div>
         </div>
 
@@ -1986,15 +1994,15 @@ body {
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="7" y="7" width="10" height="10" rx="1"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
           <div>
             デュアルコア RISC-V<br>
-            最大 96 MHz、DSP
+            最大 96 MHz、DSP 拡張
           </div>
         </div>
 
         <div class="spec">
           <div class="spec-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="3" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="3" y="14" width="7" height="7"/><rect fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" x="14" y="14" width="7" height="7"/></svg></div>
           <div>
-            SRAM 384 KB、GPIO 40<br>
-            タッチ 15、外部 PSRAM
+            SRAM 384 KB、GPIO x 40<br>
+            タッチ x 15、外部 PSRAM
           </div>
         </div>
 
@@ -2039,13 +2047,13 @@ body {
       <div class="mosaico-row">
         <div class="mosaico-name">ESP-Mosaico</div>
         <div class="mosaico-tagline">
-          ESP32-S31 搭載 — Coding Agent 向けモジュール型開発ボード
+          ESP32-S31 搭載 - Coding Agent 向けモジュール型開発ボード
         </div>
       </div>
 
       <div class="mosaico-desc">
-        480 × 480 タッチディスプレイ、音声、6軸 IMU、デュアル磁気センサー、カメラ拡張に対応。<br>
-        HMI・エッジAI・AI Coding のプロトタイピングを加速します。
+        480 × 480 タッチディスプレイ、音声、6 軸 IMU、デュアル磁気センサー、カメラ拡張に対応。<br>
+        HMI・エッジ AI・AI コーディングのプロトタイピングを加速します。
       </div>
 
       <div class="mosaico-points">
@@ -2112,8 +2120,10 @@ body {
         </div>
 
         <div class="application-copy">
-          照明・センサー・家電を Matter で<br>相互運用可能なデバイスへ。<br>ESP-Matter と Wi-Fi / Thread が<br>製品開発を効率化。<br>低消費電力無線とセキュリティ機能で<br>幅広いスマートホーム機器に対応。
+          Matter と Wi-Fi / Thread で、照明・センサー・家電を相互接続。<br>
+          低消費電力でセキュアなスマートホーム製品開発を加速。
         </div>
+        <div class="application-soc">推奨 SoC: ESP32-C / H / S シリーズ</div>
 
       </div>
 
@@ -2136,8 +2146,9 @@ body {
         </div>
 
         <div class="application-copy">
-          カメラ、LCD、タッチ、音声を<br>統合した HMI を構築。<br>ESP-GMF が音声・映像・画像の<br>処理パイプライン構築を支援。<br>JPEG / 2D 描画などを活用し、<br>リッチな UI を実現します。
+          カメラ・LCD・タッチ・音声を統合。ESP-GMF と JPEG / 2D 描画を活用し、リッチな HMI / UI を構築。
         </div>
+        <div class="application-soc">推奨 SoC: ESP32-S31 / P4</div>
 
       </div>
 
@@ -2160,8 +2171,9 @@ body {
         </div>
 
         <div class="application-copy">
-          カメラ映像をデバイス上で認識し、<br>必要な情報だけを送信。<br>ESP-DL / ESP-NN / ESP-VISION が<br>推論と画像処理を支援。<br>カメラ入力と SIMD 演算により、<br>低遅延なエッジ AI を実現します。
+          カメラ映像をデバイス上で認識・処理。ESP-DL / ESP-NN / ESP-VISION で、低遅延なエッジ AI を実現。
         </div>
+        <div class="application-soc">推奨 SoC: ESP32-S31 / P4</div>
 
       </div>
 
@@ -2184,8 +2196,10 @@ body {
         </div>
 
         <div class="application-copy">
-          音声入力とクラウド AI を組み合わせ、<br>対話型デバイスを構築。<br>ESP Private Agents が<br>AI エージェント連携を支援。<br>Bluetooth と音声 I/O を活用し、<br>多彩な音声体験を実現します。
+          音声入力とクラウド AI を組み合わせ、対話型デバイスを構築。<br>
+          ESP Private Agents で AI エージェントとの連携を支援。
         </div>
+        <div class="application-soc">推奨 SoC: ESP32-S31</div>
 
       </div>
 
@@ -2208,8 +2222,9 @@ body {
         </div>
 
         <div class="application-copy">
-          Thread / Zigbee で低消費電力の<br>メッシュネットワークを構築。<br>ESP-Matter による相互運用性と、<br>Wi-Fi / Ethernet を組み合わせ、<br>センサーからゲートウェイまで<br>柔軟なシステム構成に対応します。
+          Thread / Zigbee で低消費電力メッシュネットワークを構築。Wi-Fi / Ethernet と組み合わせ、センサーからゲートウェイまで対応。
         </div>
+        <div class="application-soc">推奨 SoC: ESP32-C5 / H21 / H4 / S31</div>
 
       </div>
 
@@ -2232,8 +2247,10 @@ body {
         </div>
 
         <div class="application-copy">
-          LE Audio、BIS / CIS、PAwR、<br>Direction Finding に対応。<br>音声・通知・センシングに加え、<br>タッチ入力も組み合わせ、<br>ウェアラブルから小型 HMI まで<br>新しいユーザー体験を実現します。
+          LE Audio、BIS / CIS、PAwR、方向検知に対応。<br>
+          音声・センシング・タッチを組み合わせ、新しいユーザー体験を実現。
         </div>
+        <div class="application-soc">推奨 SoC: ESP32-H4 / H21 / S31</div>
 
       </div>
 
