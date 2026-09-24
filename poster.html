@@ -806,7 +806,7 @@ body {
 .solution-card{padding:2px 12px 8px}
 .solution-icon{width:58px;height:58px;margin-bottom:6px}
 .solution-icon svg{width:32px;height:32px}
-.solution-name{font-size:20px}
+.solution-name{font-size:22px}
 .solution-copy{font-size:14px;margin-top:6px;line-height:1.4}
 .products{height:730px}
 .applications{height:338px}
@@ -846,7 +846,7 @@ body {
 }
 .solution-sidecopy{right:38px;top:79px;width:142px}
 .solution-sidecopy b{font-size:22px}
-.solution-sidecopy span{font-size:11px;letter-spacing:2.7px}
+.solution-sidecopy span{font-size:14px;letter-spacing:2.7px}
 
 .chip-image{max-width:154px;max-height:142px}
 .product-name{font-size:30px}
@@ -922,6 +922,7 @@ body {
 .hero-chip-image{
   width:430px!important;height:330px!important;object-fit:contain!important;object-position:center;
   -webkit-mask-image:none!important;mask-image:none!important;
+  transform:translateX(-30px);
 }
 .solution-sidecopy{
   grid-area:side;position:static!important;right:auto!important;top:auto!important;
@@ -943,12 +944,12 @@ body {
   object-fit:cover!important;object-position:center;
 }
 .application-body{flex:1 1 auto;height:auto!important;padding:22px 12px 12px;display:flex;flex-direction:column}
-.application-title{font-size:14px;line-height:1.25;height:1.25em;white-space:nowrap}
+.application-title{font-size:16px;line-height:1.25;height:1.25em;white-space:nowrap}
 .application-copy{
-  font-size:13px;line-height:1.35;height:auto;overflow:visible;
+  font-size:14px;line-height:1.35;height:auto;overflow:visible;
 }
 .application-soc{
-  margin-top:auto;padding-top:6px;font-size:11px;line-height:1.25;font-weight:800;color:#162234;
+  margin-top:auto;padding-top:6px;font-size:14px;line-height:1.25;font-weight:800;color:#162234;
   white-space:nowrap;
 }
 .footer{flex:0 0 102px;height:102px!important}
@@ -1063,7 +1064,7 @@ body {
   border-radius:7px;
   background:rgba(5,18,31,.84);
   color:#fff;
-  font-size:11px;
+  font-size:14px;
   font-weight:800;
   letter-spacing:.4px;
 }
@@ -1137,6 +1138,8 @@ body {
 }
 .mosaico-row{
   gap:12px!important;
+  flex-direction:column;
+  align-items:flex-start;
 }
 .mosaico-name{
   font-size:29px!important;
@@ -1155,11 +1158,11 @@ body {
 }
 .mosaico-point{
   padding:3px 7px!important;
-  font-size:10px!important;
+  font-size:14px!important;
 }
 .mosaico-media{
   width:300px!important;
-  height:96px!important;
+  height:156px!important;
   justify-self:end;
   border-radius:11px!important;
 }
@@ -1167,7 +1170,7 @@ body {
   right:8px!important;
   bottom:6px!important;
   padding:4px 7px!important;
-  font-size:9px!important;
+  font-size:14px!important;
 }
 
 
@@ -1212,9 +1215,13 @@ body {
 /* Keep the official Mosaico isometric PNG fully visible. */
 .mosaico-media img{
   object-fit:contain!important;
-  object-position:center!important;
+  object-position:left center!important;
   background:linear-gradient(135deg,#f8fbfd,#eaf3f8);
-  padding:3px;
+}
+.mosaico-shot{
+  display:block;
+  height:100%;
+  overflow:hidden;
 }
 
 /* Espressif-branded QR treatment.
@@ -1229,7 +1236,7 @@ body {
 .website-copy small{
   display:block;
   margin-top:3px;
-  font-size:10px;
+  font-size:14px;
   letter-spacing:1.6px;
   color:#718296;
   font-weight:800;
@@ -1271,14 +1278,14 @@ body {
   object-fit:contain;
 }
 .qr-brand-name{
-  font-size:9px;
+  font-size:14px;
   line-height:1;
   letter-spacing:.8px;
   font-weight:900;
   color:#13253a;
 }
 .qr-brand-japan{
-  font-size:8px;
+  font-size:14px;
   line-height:1;
   letter-spacing:1.5px;
   font-weight:900;
@@ -1406,7 +1413,7 @@ body {
 .qr-home-en{
   margin-top:5px;
   color:#6a7077;
-  font-size:5.8px;
+  font-size:14px;
   line-height:1;
   font-weight:800;
   letter-spacing:.65px;
@@ -1486,7 +1493,7 @@ body {
 }
 
 .footer-brand{
-  font-size:12px!important;
+  font-size:14px!important;
   letter-spacing:3.4px!important;
   line-height:1.25!important;
 }
@@ -1517,7 +1524,7 @@ body {
 
 .qr-selected-card{
   display:block!important;
-  width:162px!important;
+  width:190px!important;
   height:auto!important;
   max-height:none!important;
   object-fit:contain!important;
@@ -2047,7 +2054,7 @@ body {
       </div>
 
       <div class="mosaico-row">
-        <div class="mosaico-name">ESP-Mosaico</div>
+        <div class="mosaico-name">ESP-MOSAICO</div>
         <div class="mosaico-tagline">
           搭载 ESP32-S31 - 面向 Coding Agent 的模块化开发板
         </div>
@@ -2074,9 +2081,11 @@ body {
        target="_blank"
        rel="noopener noreferrer"
        aria-label="ESP-Mosaico official website">
+      <span class="mosaico-shot">
       <img
-        src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s31/_images/esp-mosaico-isometric.png"
+        src="assets/esp-mosaico.png"
         alt="ESP-Mosaico official product image">
+      </span>
     </a>
 
   </div>
@@ -2125,7 +2134,7 @@ body {
           通过 Matter 和 Wi-Fi / Thread 互联照明、传感器与家电。<br>
           以低功耗与安全特性加速智能家居产品开发。
         </div>
-        <div class="application-soc">推荐 SoC： ESP32-C / H / S 系列</div>
+        <div class="application-soc">推荐 SoC： ESP32-C/H/S 系列</div>
 
       </div>
 
@@ -2150,7 +2159,7 @@ body {
         <div class="application-copy">
           集成摄像头、LCD、触摸与音频。结合 ESP-GMF 和 JPEG / 2D 绘图，构建丰富的 HMI / UI。
         </div>
-        <div class="application-soc">推荐 SoC： ESP32-S31 / P4</div>
+        <div class="application-soc">推荐 SoC： ESP32-S31/P4</div>
 
       </div>
 
@@ -2175,7 +2184,7 @@ body {
         <div class="application-copy">
           在设备端识别和处理摄像头画面。通过 ESP-DL / ESP-NN / ESP-VISION，实现低延迟边缘 AI。
         </div>
-        <div class="application-soc">推荐 SoC： ESP32-S31 / P4</div>
+        <div class="application-soc">推荐 SoC： ESP32-S31/P4</div>
 
       </div>
 
@@ -2226,7 +2235,7 @@ body {
         <div class="application-copy">
           通过 Thread / Zigbee 构建低功耗 Mesh 网络。结合 Wi-Fi / Ethernet，覆盖从传感器到网关的应用。
         </div>
-        <div class="application-soc">推荐 SoC： ESP32-C5 / H21 / H4 / S31</div>
+        <div class="application-soc">推荐 SoC： ESP32-C5/H21/S31</div>
 
       </div>
 
@@ -2252,7 +2261,7 @@ body {
           支持 LE Audio、BIS / CIS、PAwR、测向。<br>
           融合音频、感知与触摸，打造全新用户体验。
         </div>
-        <div class="application-soc">推荐 SoC： ESP32-H4 / H21 / S31</div>
+        <div class="application-soc">推荐 SoC： ESP32-H4/H21/S31</div>
 
       </div>
 
