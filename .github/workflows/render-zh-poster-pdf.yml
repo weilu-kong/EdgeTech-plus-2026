@@ -1,0 +1,57 @@
+name: Render Chinese A0 Poster PDF
+
+on:
+  push:
+    branches:
+      - poster-zh-cn
+    paths:
+      - .github/workflows/render-zh-poster-pdf.yml
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout poster branch
+        uses: actions/checkout@v4
+
+      - name: Prepare A0 print CSS
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path("poster.html")
+          html = p.read_text(encoding="utf-8")
+          css = '<style>@page { size: 841mm 1189mm; margin: 0; } html,body { margin: 0 !important; padding: 0 !important; }</style>'
+          if css not in html:
+              html = html.replace("</head>", css + "\n</head>")
+          p.write_text(html, encoding="utf-8")
+
+      - name: Render PDF with Chrome
+        shell: bash
+        run: |
+          set -euxo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --allow-file-access-from-files \
+            --run-all-compositor-stages-before-draw \
+            --virtual-time-budget=8000 \
+            --no-pdf-header-footer \
+            --print-to-pdf="$PWD/EdgeTech2026_zh-CN_A0.pdf" \
+            "file://$PWD/poster.html"
+          test -s EdgeTech2026_zh-CN_A0.pdf
+          pdfinfo EdgeTech2026_zh-CN_A0.pdf | tee pdfinfo.txt
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: EdgeTech2026-zh-CN-A0-PDF
+          path: |
+            EdgeTech2026_zh-CN_A0.pdf
+            pdfinfo.txt
+          if-no-files-found: error
+          retention-days: 1
