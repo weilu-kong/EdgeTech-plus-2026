@@ -1187,6 +1187,112 @@ body {
   white-space:nowrap;
 }
 
+
+/* =========================================================
+   v10 — side-copy type, Espressif QR card, Mosaico image
+   ========================================================= */
+
+/* The generic .solution-sidecopy span rule also affected jp-term.
+   Restore the Japanese words to exactly the same size/weight as ＆. */
+.solution-sidecopy b .jp-term{
+  font-size:inherit!important;
+  line-height:inherit!important;
+  letter-spacing:inherit!important;
+  color:inherit!important;
+  font-weight:inherit!important;
+}
+
+/* Keep the official Mosaico isometric PNG fully visible. */
+.mosaico-media img{
+  object-fit:contain!important;
+  object-position:center!important;
+  background:linear-gradient(135deg,#f8fbfd,#eaf3f8);
+  padding:3px;
+}
+
+/* Espressif-branded QR treatment.
+   The QR matrix itself stays untouched for scan reliability. */
+.website{
+  gap:12px!important;
+}
+.website-copy{
+  text-align:right;
+  line-height:1.28;
+}
+.website-copy small{
+  display:block;
+  margin-top:3px;
+  font-size:10px;
+  letter-spacing:1.6px;
+  color:#718296;
+  font-weight:800;
+}
+.qr-brand-card{
+  width:174px;
+  height:88px;
+  display:grid;
+  grid-template-columns:82px 92px;
+  overflow:hidden;
+  border-radius:12px;
+  background:white;
+  border:1px solid #d7e3eb;
+  box-shadow:0 5px 16px rgba(15,34,52,.14);
+}
+.qr-brand-side{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:3px;
+  padding:6px 4px;
+  background:linear-gradient(155deg,#ffffff 0%,#f4f8fb 100%);
+  border-right:3px solid #e4002b;
+}
+.qr-brand-side::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:5px;
+  background:#e4002b;
+}
+.qr-brand-mark{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+}
+.qr-brand-name{
+  font-size:9px;
+  line-height:1;
+  letter-spacing:.8px;
+  font-weight:900;
+  color:#13253a;
+}
+.qr-brand-japan{
+  font-size:8px;
+  line-height:1;
+  letter-spacing:1.5px;
+  font-weight:900;
+  color:#e4002b;
+}
+.qr-brand-code{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+}
+.qr-brand-code .qr-img{
+  width:82px!important;
+  height:82px!important;
+  padding:3px!important;
+  margin:0!important;
+  border-radius:0!important;
+  background:#fff!important;
+  box-shadow:none!important;
+}
+
 </style>
 </head>
 
@@ -1562,7 +1668,7 @@ body {
 
 
       <div class="product-use">
-        用途：Wi-Fi センシング / 測距 / デュアルバンド IoT
+        用途：ゲートウェイ / 家電 / Wi-Fi CSI センシング
       </div>
 
     </article>
@@ -1741,7 +1847,7 @@ body {
        rel="noopener noreferrer"
        aria-label="ESP-Mosaico official website">
       <img
-        src="https://mosaico.espressif.com/images/makers-foreground-cropped.webp"
+        src="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s31/_images/esp-mosaico-isometric.png"
         alt="ESP-Mosaico official product image">
     </a>
 
@@ -1942,9 +2048,21 @@ body {
 
   <div class="website">
 
-    日本語公式サイトはこちら →
+    <div class="website-copy">
+      日本語公式サイトはこちら →
+      <small>SCAN TO VISIT ESPRESSIF JAPAN</small>
+    </div>
 
-    <img class="qr-img" src="assets/qr-ja.png" alt="Espressif Japanese website QR">
+    <div class="qr-brand-card" aria-label="Espressif Japanese official website QR">
+      <div class="qr-brand-side">
+        <img class="qr-brand-mark" src="assets/espressif-mark.png" alt="">
+        <span class="qr-brand-name">ESPRESSIF</span>
+        <span class="qr-brand-japan">JAPAN</span>
+      </div>
+      <div class="qr-brand-code">
+        <img class="qr-img" src="assets/qr-ja.png" alt="Espressif Japanese website QR">
+      </div>
+    </div>
 
   </div>
 
